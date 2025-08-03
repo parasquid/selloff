@@ -19,7 +19,7 @@ body {
 
 .header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .header h1 {
@@ -31,6 +31,42 @@ body {
 .header p {
     font-size: 1.1rem;
     color: #666;
+}
+
+.category-tabs {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #eee;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.tab:hover {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.tab.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+    background-color: rgba(52, 152, 219, 0.08);
 }
 
 .items-grid {
@@ -72,6 +108,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.item-thumbnail img[src*="placeholder.jpg"] {
+    opacity: 0.7;
+    filter: grayscale(20%);
 }
 
 .item-thumbnail.placeholder {
@@ -110,6 +152,19 @@ body {
     border-radius: 16px;
     font-size: 0.8rem;
     display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.item-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.item-categories .item-category {
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .breadcrumb {
@@ -179,6 +234,13 @@ body {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease;
+}
+
+.gallery-image[src*="placeholder.jpg"],
+.main-image[src*="placeholder.jpg"] {
+    opacity: 0.7;
+    filter: grayscale(20%);
 }
 
 .no-image {
@@ -209,6 +271,13 @@ body {
 
 .meta-item strong {
     color: #2c3e50;
+}
+
+.meta-categories {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
 }
 
 .item-description {
@@ -311,6 +380,19 @@ body {
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
+    }
+    
+    .tabs-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 2px;
+    }
+    
+    .tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        flex-shrink: 0;
     }
     
     .items-grid {

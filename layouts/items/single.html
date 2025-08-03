@@ -1,5 +1,7 @@
 {{ define "main" }}
 <div class="container">
+    {{ partial "category-tabs.html" . }}
+    
     <nav class="breadcrumb">
         <a href="{{ "/" | relURL }}">← Back to Items</a>
     </nav>
@@ -43,7 +45,16 @@
                     </div>
                     {{ end }}
                     
-                    {{ if .Params.category }}
+                    {{ if .Params.categories }}
+                    <div class="meta-item">
+                        <strong>Categories:</strong>
+                        <div class="meta-categories">
+                            {{ range .Params.categories }}
+                            <span class="item-category">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ else if .Params.category }}
                     <div class="meta-item">
                         <strong>Category:</strong> {{ .Params.category }}
                     </div>

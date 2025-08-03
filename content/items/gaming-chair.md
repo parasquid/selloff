@@ -5,6 +5,7 @@ draft: false
 price: "80"
 condition: "Very Good"
 category: "Furniture"
+categories: ["Furniture"]
 thumbnail: "/images/gaming-chair-thumb.jpg"
 images:
   - "/images/gaming-chair-1.jpg"

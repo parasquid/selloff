@@ -11,5 +11,19 @@
     <main>
         {{ block "main" . }}{{ end }}
     </main>
+    <script>
+        // Handle image loading errors with placeholder
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                img.addEventListener('error', function() {
+                    if (this.src !== '{{ "/images/placeholder.jpg" | relURL }}') {
+                        this.src = '{{ "/images/placeholder.jpg" | relURL }}';
+                        this.alt = 'Image not available';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

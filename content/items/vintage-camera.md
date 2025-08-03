@@ -5,6 +5,7 @@ draft: false
 price: "150"
 condition: "Good"
 category: "Photography"
+categories: ["Photography"]
 thumbnail: "/images/canon-ae1-thumb.jpg"
 images:
   - "/images/canon-ae1-1.jpg"

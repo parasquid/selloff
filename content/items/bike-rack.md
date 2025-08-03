@@ -5,6 +5,7 @@ draft: false
 price: "45"
 condition: "Good"
 category: "Automotive"
+categories: ["Automotive"]
 thumbnail: "/images/bike-rack-thumb.jpg"
 sold: true
 ---

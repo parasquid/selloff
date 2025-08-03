@@ -1,15 +1,14 @@
 {{ define "main" }}
 <div class="container">
     <header class="header">
-        <h1>{{ .Site.Title }}</h1>
-        <p>{{ .Site.Params.description }}</p>
+        <h1>{{ .Title }} Items</h1>
+        <p>Items in the {{ .Title | lower }} category</p>
     </header>
 
     {{ partial "category-tabs.html" . }}
 
     <div class="items-grid">
-        {{ range .Site.RegularPages }}
-        {{ if eq .Section "items" }}
+        {{ range .Pages }}
         {{ if not .Params.sold }}
         <div class="item-card">
             <a href="{{ .Permalink }}" class="item-link">
@@ -44,14 +43,13 @@
         </div>
         {{ end }}
         {{ end }}
-        {{ end }}
     </div>
 
-    {{ $soldItems := where (where .Site.RegularPages "Section" "items") "Params.sold" true }}
+    {{ $soldItems := where .Pages "Params.sold" true }}
     {{ if $soldItems }}
     <section class="sold-section">
         <header class="sold-header">
-            <h2>Recently Sold</h2>
+            <h2>Recently Sold in {{ .Title }}</h2>
         </header>
         <div class="sold-items-grid">
             {{ range $soldItems }}

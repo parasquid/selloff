@@ -5,6 +5,7 @@ draft: false
 price: ""
 condition: ""
 category: ""
+categories: [""] # Available: Photography, Furniture, Automotive, Electronics, Sports, Health, Kitchen, Games, Entertainment
 thumbnail: ""
 images: []
 sold: false
