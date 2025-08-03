@@ -6,6 +6,12 @@ theme: ''
 params:
   description: 'Items I want to sell'
   author: 'Your Name'
+  currency: '$' # Currency symbol to display with prices
+  # Examples for other currencies:
+  # currency: 'RM' # Malaysian Ringgit (MYR)
+  # currency: 'S$' # Singapore Dollar (SGD)
+  # currency: '¥'  # Japanese Yen (JPY)
+  # currency: '₱'  # Philippine Peso (PHP)
 
 taxonomies:
   category: 'categories'

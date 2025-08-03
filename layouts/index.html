@@ -25,7 +25,7 @@
                 <div class="item-info">
                     <h3 class="item-title">{{ .Title }}</h3>
                     {{ if .Params.price }}
-                    <p class="item-price">${{ .Params.price }}</p>
+                    <p class="item-price">{{ .Site.Params.currency }}{{ .Params.price }}</p>
                     {{ end }}
                     {{ if .Params.condition }}
                     <p class="item-condition">{{ .Params.condition }}</p>
@@ -75,7 +75,7 @@
                     <div class="item-info">
                         <h3 class="item-title">{{ .Title }}</h3>
                         {{ if .Params.price }}
-                        <p class="item-price sold-price">${{ .Params.price }}</p>
+                        <p class="item-price sold-price">{{ .Site.Params.currency }}{{ .Params.price }}</p>
                         {{ end }}
                         {{ if .Params.condition }}
                         <p class="item-condition">{{ .Params.condition }}</p>

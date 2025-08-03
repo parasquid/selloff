@@ -35,7 +35,7 @@
                 <div class="item-meta">
                     {{ if .Params.price }}
                     <div class="meta-item">
-                        <strong>Price:</strong> ${{ .Params.price }}
+                        <strong>Price:</strong> {{ .Site.Params.currency }}{{ .Params.price }}
                     </div>
                     {{ end }}
                     

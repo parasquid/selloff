@@ -114,7 +114,23 @@ Edit `static/css/style.css` to customize the appearance.
 
 ### Configuration
 
-Modify `hugo.yaml` to change site settings like title, description, etc.
+Modify `hugo.yaml` to change site settings like title, description, currency, etc.
+
+#### Currency Configuration
+
+The currency symbol is configurable in `hugo.yaml`:
+
+```yaml
+params:
+  currency: '$' # Default USD
+  # Examples for other currencies:
+  # currency: 'RM' # Malaysian Ringgit (MYR)
+  # currency: 'S$' # Singapore Dollar (SGD)
+  # currency: '¥'  # Japanese Yen (JPY)  
+  # currency: '₱'  # Philippine Peso (PHP)
+```
+
+Simply change the `currency` value and all prices throughout the site will display with the new symbol.
 
 ### Templates
 
