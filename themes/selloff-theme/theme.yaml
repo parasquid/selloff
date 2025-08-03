@@ -1,0 +1,12 @@
+name: "Selloff Theme"
+license: "AGPL-3.0"
+licenselink: "https://github.com/yourname/selloff-theme/blob/main/LICENSE"
+description: "A Hugo theme for listing personal items for sale with multi-platform integration"
+homepage: "https://github.com/yourname/selloff-theme"
+tags: ["ecommerce", "marketplace", "personal", "selling", "carousell"]
+features: ["responsive", "contact-forms", "multi-currency", "categories", "sold-tracking"]
+min_version: "0.110.0"
+
+author:
+  name: "Your Name"
+  homepage: "https://yourwebsite.com"

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <script>
+        // Handle image loading errors with placeholder
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                img.addEventListener('error', function() {
+                    if (this.src !== '{{ "/images/placeholder.jpg" | relURL }}') {
+                        this.src = '{{ "/images/placeholder.jpg" | relURL }}';
+                        this.alt = 'Image not available';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
