@@ -51,6 +51,20 @@ A Hugo theme for creating a personal marketplace to sell your items online with 
    hugo new items/my-first-item.md
    ```
 
+## Demo Site
+
+Check out the `exampleSite/` directory for a complete demonstration of all theme features including:
+- Sample items across multiple categories
+- Carousell integration examples
+- Contact system demonstration
+- Sold items showcase
+
+To run the demo locally:
+```bash
+cd themes/selloff-theme/exampleSite
+hugo server --themesDir ../.. --theme selloff-theme
+```
+
 ## Item Configuration
 
 Each item supports these frontmatter fields:

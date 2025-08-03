@@ -1,11 +1,11 @@
-baseURL: 'https://example.com'
+baseURL: 'https://selloff-theme-demo.example.com'
 languageCode: 'en-us'
-title: 'My Selloff Site - Items for Sale'
+title: 'Selloff Theme Demo - Items for Sale'
 theme: 'selloff-theme'
 
 params:
-  description: 'Items I want to sell'
-  author: 'Your Name'
+  description: 'Demo site showcasing the Selloff Hugo theme features'
+  author: 'Theme Demo'
   currency: '$' # Currency symbol to display with prices
   # Examples for other currencies:
   # currency: 'RM' # Malaysian Ringgit (MYR)
@@ -16,13 +16,13 @@ params:
   # Contact information for potential buyers
   # NOTE: If contact section is not configured, the contact box will not appear on item pages
   contact:
-    email: 'seller@example.com'
+    email: 'demo@example.com'
     whatsapp: '+1234567890'          # Include country code
-    telegram: '@yourusername'        # Username with @
-    instagram: '@yourusername'       # Username with @
-    x: '@yourusername'              # X (Twitter) username with @
-    carousell: 'yourusername'       # Carousell username
-    facebook: 'your.profile'        # Facebook profile/page name
+    telegram: '@demouser'            # Username with @
+    instagram: '@demouser'           # Username with @
+    x: '@demouser'                  # X (Twitter) username with @
+    carousell: 'demouser'           # Carousell username
+    facebook: 'demo.user'           # Facebook profile/page name
     phone: '+1 (234) 567-8900'     # Formatted phone number
 
 taxonomies:
