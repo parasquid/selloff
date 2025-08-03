@@ -10,6 +10,7 @@ thumbnail: "/images/laptop-stand-thumb.jpg"
 images:
   - "/images/laptop-stand-1.jpg"
   - "/images/laptop-stand-2.jpg"
+carousell: "https://carousell.com/p/adjustable-laptop-stand-1234567894"
 sold: true
 ---
 

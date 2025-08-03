@@ -63,6 +63,12 @@
                     <div class="meta-item">
                         <strong>Listed:</strong> {{ .Date.Format "January 2, 2006" }}
                     </div>
+                    
+                    {{ if .Params.carousell }}
+                    <div class="meta-item">
+                        <strong>Also available on:</strong> <a href="{{ .Params.carousell }}" target="_blank" class="carousell-link">Carousell</a>
+                    </div>
+                    {{ end }}
                 </div>
 
                 <div class="item-description">

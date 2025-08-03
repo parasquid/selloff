@@ -10,6 +10,7 @@ thumbnail: "/images/kitchen-scale-thumb.jpg"
 images:
   - "/images/kitchen-scale-1.jpg"
   - "/images/kitchen-scale-2.jpg"
+carousell: "https://carousell.com/p/digital-kitchen-scale-1234567895"
 sold: true
 ---
 

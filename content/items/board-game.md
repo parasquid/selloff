@@ -10,6 +10,7 @@ thumbnail: "/images/board-game-thumb.jpg"
 images:
   - "/images/board-game-1.jpg"
   - "/images/board-game-2.jpg"
+carousell: "https://carousell.com/p/strategy-board-game-collection-1234567893"
 sold: false
 ---
 

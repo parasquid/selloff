@@ -10,6 +10,7 @@ thumbnail: "/images/bluetooth-speaker-thumb.jpg"
 images:
   - "/images/bluetooth-speaker-1.jpg"
   - "/images/bluetooth-speaker-2.jpg"
+carousell: "https://carousell.com/p/portable-bluetooth-speaker-1234567892"
 sold: false
 ---
 

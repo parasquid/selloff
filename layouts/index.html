@@ -39,6 +39,11 @@
                     {{ else if .Params.category }}
                     <span class="item-category">{{ .Params.category }}</span>
                     {{ end }}
+                    {{ if .Params.carousell }}
+                    <div class="carousell-badge">
+                        <span class="carousell-indicator">Also on Carousell</span>
+                    </div>
+                    {{ end }}
                 </div>
             </a>
         </div>
@@ -88,6 +93,11 @@
                         </div>
                         {{ else if .Params.category }}
                         <span class="item-category">{{ .Params.category }}</span>
+                        {{ end }}
+                        {{ if .Params.carousell }}
+                        <div class="carousell-badge">
+                            <span class="carousell-indicator">Also on Carousell</span>
+                        </div>
                         {{ end }}
                     </div>
                 </a>

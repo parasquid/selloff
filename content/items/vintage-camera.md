@@ -11,6 +11,7 @@ images:
   - "/images/canon-ae1-1.jpg"
   - "/images/canon-ae1-2.jpg"
   - "/images/canon-ae1-3.jpg"
+carousell: "https://carousell.com/p/vintage-canon-ae1-camera-1234567890"
 sold: false
 ---
 

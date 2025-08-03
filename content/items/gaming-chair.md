@@ -10,6 +10,7 @@ thumbnail: "/images/gaming-chair-thumb.jpg"
 images:
   - "/images/gaming-chair-1.jpg"
   - "/images/gaming-chair-2.jpg"
+carousell: "https://carousell.com/p/ergonomic-gaming-chair-1234567891"
 sold: false
 ---
 
