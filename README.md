@@ -69,10 +69,30 @@ Any additional notes.
 
 ### Managing Images
 
-1. Add images to the `static/images/` directory
-2. Reference them in your item's frontmatter:
-   - `thumbnail`: Main image for the grid view
-   - `images`: Array of detail images for the item page
+For better organization, create a subfolder for each item's images:
+
+1. **Create a subfolder** for your item: `static/images/[item-slug]/`
+   - Example: `static/images/vintage-camera/` or `static/images/icy-dock-expresscage-mb326sp-b/`
+
+2. **Add images** to the item's subfolder:
+   ```
+   static/images/vintage-camera/
+   ├── camera-front.jpg
+   ├── camera-back.jpg
+   ├── camera-lens.jpg
+   └── camera-thumb.jpg
+   ```
+
+3. **Reference them** in your item's frontmatter using the subfolder path:
+   ```yaml
+   thumbnail: "/images/vintage-camera/camera-thumb.jpg"
+   images:
+     - "/images/vintage-camera/camera-front.jpg"
+     - "/images/vintage-camera/camera-back.jpg"
+     - "/images/vintage-camera/camera-lens.jpg"
+   ```
+
+This organization pattern keeps images grouped by item, making it easier to manage multiple listings and their associated images.
 
 ### Deployment
 
