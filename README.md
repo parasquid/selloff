@@ -96,22 +96,36 @@ This organization pattern keeps images grouped by item, making it easier to mana
 
 ### Deployment
 
-This site automatically deploys to Cloudflare Pages via GitHub Actions on every push to the main branch.
+This site can be deployed to GitHub Pages using the included deployment script.
 
-#### Setup Cloudflare Pages Deployment
+#### Setup GitHub Pages Deployment
 
-1. Create a Cloudflare Pages project
-2. Add the following secrets to your GitHub repository:
-   - `CLOUDFLARE_API_TOKEN`: Your Cloudflare API token with Pages permissions
-   - `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare account ID
-   - `CLOUDFLARE_PROJECT_NAME`: Your Cloudflare Pages project name
+1. **Configure GitHub Pages in your repository:**
+   - Go to repository Settings → Pages
+   - Under "Source", select "Deploy from a branch"
+   - Choose the `gh-pages` branch and `/` (root) folder
+   - Save the settings
 
-3. Push to the main branch to trigger deployment
+2. **Deploy your site:**
+   ```bash
+   ./deploy.sh
+   ```
+
+3. **What the script does:**
+   - Builds the Hugo site with optimizations (`hugo --gc --minify`)
+   - Creates a git repository in the `public/` directory
+   - Commits all built files with timestamp
+   - Force pushes to the `gh-pages` branch
+
+4. **First-time setup:**
+   - The script will automatically configure the remote origin
+   - GitHub Pages will be available at `https://yourusername.github.io/selloff`
+
+**Note:** Run `./deploy.sh` whenever you want to publish changes to your live site.
 
 ## Project Structure
 
 ```
-├── .github/workflows/    # GitHub Actions
 ├── archetypes/           # Content templates
 ├── content/              # Site content
 │   ├── _index.md        # Homepage content
@@ -123,6 +137,7 @@ This site automatically deploys to Cloudflare Pages via GitHub Actions on every 
 ├── static/               # Static assets
 │   ├── css/             # Stylesheets
 │   └── images/          # Item images
+├── deploy.sh             # GitHub Pages deployment script
 └── hugo.yaml            # Hugo configuration
 ```
 
