@@ -12,6 +12,18 @@ params:
   # currency: 'S$' # Singapore Dollar (SGD)
   # currency: '¥'  # Japanese Yen (JPY)
   # currency: '₱'  # Philippine Peso (PHP)
+  
+  # Contact information for potential buyers
+  # NOTE: If contact section is not configured, the contact box will not appear on item pages
+  contact:
+    email: 'seller@example.com'
+    whatsapp: '+1234567890'          # Include country code
+    telegram: '@yourusername'        # Username with @
+    instagram: '@yourusername'       # Username with @
+    x: '@yourusername'              # X (Twitter) username with @
+    carousell: 'yourusername'       # Carousell username
+    facebook: 'your.profile'        # Facebook profile/page name
+    phone: '+1 (234) 567-8900'     # Formatted phone number
 
 taxonomies:
   category: 'categories'

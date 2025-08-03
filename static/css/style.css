@@ -295,6 +295,107 @@ body {
     margin-top: 0;
 }
 
+.contact-seller {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.contact-seller h3 {
+    margin: 0 0 1.5rem 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    background: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #495057;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.contact-method:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+.contact-method svg {
+    margin-bottom: 0.5rem;
+    width: 24px;
+    height: 24px;
+}
+
+.contact-method span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Contact method specific colors */
+.contact-method.email:hover {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.contact-method.whatsapp:hover {
+    color: #25d366;
+    border-color: #25d366;
+}
+
+.contact-method.telegram:hover {
+    color: #0088cc;
+    border-color: #0088cc;
+}
+
+.contact-method.instagram:hover {
+    color: #e4405f;
+    border-color: #e4405f;
+}
+
+.contact-method.x:hover {
+    color: #000000;
+    border-color: #000000;
+}
+
+.contact-method.carousell:hover {
+    color: #ff5722;
+    border-color: #ff5722;
+}
+
+.contact-method.facebook:hover {
+    color: #1877f2;
+    border-color: #1877f2;
+}
+
+.contact-method.phone:hover {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.contact-note {
+    text-align: center;
+    margin: 0;
+    color: #6c757d;
+    font-style: italic;
+}
+
 .sold-section {
     margin-top: 4rem;
     padding-top: 2rem;

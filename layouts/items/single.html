@@ -68,6 +68,10 @@
                 <div class="item-description">
                     {{ .Content }}
                 </div>
+
+                {{ if not .Params.sold }}
+                {{ partial "contact-seller.html" . }}
+                {{ end }}
             </div>
         </div>
     </article>
