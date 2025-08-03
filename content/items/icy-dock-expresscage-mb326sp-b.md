@@ -40,7 +40,6 @@ This cage converts a standard 5.25" drive bay into a high-density storage soluti
 - Maximum Drive Height: 9.5mm
 - Cooling: 2 x 40mm fans
 - Color: Black
-- 3-year manufacturer warranty
 
 **Condition Notes:**
 - All bays fully functional
