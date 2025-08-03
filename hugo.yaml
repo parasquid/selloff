@@ -1,8 +1,9 @@
 baseURL: 'http://localhost:1313'
 languageCode: 'en-us'
 title: 'Selloff - Items for Sale'
-themesDir: '../'
-theme: 'selloff-theme'
+module:
+  imports:
+    - path: github.com/parasquid/selloff-theme
 
 params:
   description: 'Items I want to sell'
