@@ -6,14 +6,14 @@ price: "300"
 condition: "Used - Good"
 category: "Electronics"
 categories: ["Electronics"]
-thumbnail: "/images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081132758.MP.jpg"
+thumbnail: "images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081132758.MP.jpg"
 images:
-  - "/images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081038825.MP.jpg"
-  - "/images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081132758.MP.jpg"
-  - "/images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081200061.jpg"
-  - "/images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081209111.jpg"
-  - "/images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081230469.jpg"
-  - "/images/icy-dock-expresscage-mb326sp-b/PXL_20250803_082000277.jpg"
+  - "images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081038825.MP.jpg"
+  - "images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081132758.MP.jpg"
+  - "images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081200061.jpg"
+  - "images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081209111.jpg"
+  - "images/icy-dock-expresscage-mb326sp-b/PXL_20250803_081230469.jpg"
+  - "images/icy-dock-expresscage-mb326sp-b/PXL_20250803_082000277.jpg"
 carousell: "https://www.carousell.com.my/p/icy-dock-expresscage-mb326sp-b-6-bay-2-5%E2%80%9D-sata-hdd-ssd-hot-swap-cage-1384555477/"
 sold: false
 ---

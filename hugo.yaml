@@ -11,7 +11,7 @@ caches:
 
 params:
   description: 'Items I want to sell'
-  author: 'Your Name'
+  author: 'parasquid'
   currency: 'RM' # Currency symbol to display with prices
   # Examples for other currencies:
   # currency: 'RM' # Malaysian Ringgit (MYR)

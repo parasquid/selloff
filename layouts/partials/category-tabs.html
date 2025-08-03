@@ -9,7 +9,7 @@
 {{ if gt (len $categories) 0 }}
 <nav class="category-tabs">
   <div class="tabs-container">
-    <a href="{{ "/" | relURL }}" class="tab {{ if .IsHome }}active{{ end }}">
+    <a href="{{ .Site.BaseURL }}" class="tab {{ if .IsHome }}active{{ end }}">
       All Items
     </a>
     {{ range $categories }}
@@ -23,7 +23,7 @@
     {{ if and (not $.IsHome) (eq $.Title (. | title)) }}
       {{ $isActive = true }}
     {{ end }}
-    <a href="{{ "/categories/" | relURL }}{{ $categorySlug }}/" class="tab {{ if $isActive }}active{{ end }}">
+    <a href="{{ $.Site.BaseURL }}categories/{{ $categorySlug }}/" class="tab {{ if $isActive }}active{{ end }}">
       {{ . }}
     </a>
     {{ end }}
