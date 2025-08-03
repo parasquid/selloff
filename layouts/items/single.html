@@ -1,0 +1,64 @@
+{{ define "main" }}
+<div class="container">
+    <nav class="breadcrumb">
+        <a href="{{ "/" | relURL }}">← Back to Items</a>
+    </nav>
+
+    <article class="item-detail">
+        <header class="item-header">
+            <h1>{{ .Title }}</h1>
+            {{ if .Params.sold }}
+            <span class="sold-badge">SOLD</span>
+            {{ end }}
+        </header>
+
+        <div class="item-content">
+            <div class="item-images">
+                {{ if .Params.images }}
+                <div class="image-gallery">
+                    {{ range .Params.images }}
+                    <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="gallery-image">
+                    {{ end }}
+                </div>
+                {{ else if .Params.thumbnail }}
+                <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" class="main-image">
+                {{ else }}
+                <div class="no-image">
+                    <span>No images available</span>
+                </div>
+                {{ end }}
+            </div>
+
+            <div class="item-details">
+                <div class="item-meta">
+                    {{ if .Params.price }}
+                    <div class="meta-item">
+                        <strong>Price:</strong> ${{ .Params.price }}
+                    </div>
+                    {{ end }}
+                    
+                    {{ if .Params.condition }}
+                    <div class="meta-item">
+                        <strong>Condition:</strong> {{ .Params.condition }}
+                    </div>
+                    {{ end }}
+                    
+                    {{ if .Params.category }}
+                    <div class="meta-item">
+                        <strong>Category:</strong> {{ .Params.category }}
+                    </div>
+                    {{ end }}
+                    
+                    <div class="meta-item">
+                        <strong>Listed:</strong> {{ .Date.Format "January 2, 2006" }}
+                    </div>
+                </div>
+
+                <div class="item-description">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+{{ end }}

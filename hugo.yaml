@@ -1,0 +1,19 @@
+baseURL: 'http://localhost:1313'
+languageCode: 'en-us'
+title: 'Selloff - Items for Sale'
+theme: ''
+
+params:
+  description: 'Items I want to sell'
+  author: 'Your Name'
+
+menu:
+  main:
+    - name: 'Home'
+      url: '/'
+      weight: 1
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,86 @@
+{{ define "main" }}
+<div class="container">
+    <header class="header">
+        <h1>{{ .Site.Title }}</h1>
+        <p>{{ .Site.Params.description }}</p>
+    </header>
+
+    <div class="items-grid">
+        {{ range .Site.RegularPages }}
+        {{ if eq .Section "items" }}
+        {{ if not .Params.sold }}
+        <div class="item-card">
+            <a href="{{ .Permalink }}" class="item-link">
+                {{ if .Params.thumbnail }}
+                <div class="item-thumbnail">
+                    <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" loading="lazy">
+                </div>
+                {{ else }}
+                <div class="item-thumbnail placeholder">
+                    <span>No Image</span>
+                </div>
+                {{ end }}
+                <div class="item-info">
+                    <h3 class="item-title">{{ .Title }}</h3>
+                    {{ if .Params.price }}
+                    <p class="item-price">${{ .Params.price }}</p>
+                    {{ end }}
+                    {{ if .Params.condition }}
+                    <p class="item-condition">{{ .Params.condition }}</p>
+                    {{ end }}
+                    {{ if .Params.category }}
+                    <span class="item-category">{{ .Params.category }}</span>
+                    {{ end }}
+                </div>
+            </a>
+        </div>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{ $soldItems := where (where .Site.RegularPages "Section" "items") "Params.sold" true }}
+    {{ if $soldItems }}
+    <section class="sold-section">
+        <header class="sold-header">
+            <h2>Recently Sold</h2>
+        </header>
+        <div class="sold-items-grid">
+            {{ range $soldItems }}
+            <div class="item-card sold-item">
+                <a href="{{ .Permalink }}" class="item-link">
+                    {{ if .Params.thumbnail }}
+                    <div class="item-thumbnail sold-thumbnail">
+                        <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" loading="lazy">
+                        <div class="sold-overlay">
+                            <span class="sold-text">SOLD</span>
+                        </div>
+                    </div>
+                    {{ else }}
+                    <div class="item-thumbnail placeholder sold-thumbnail">
+                        <span>No Image</span>
+                        <div class="sold-overlay">
+                            <span class="sold-text">SOLD</span>
+                        </div>
+                    </div>
+                    {{ end }}
+                    <div class="item-info">
+                        <h3 class="item-title">{{ .Title }}</h3>
+                        {{ if .Params.price }}
+                        <p class="item-price sold-price">${{ .Params.price }}</p>
+                        {{ end }}
+                        {{ if .Params.condition }}
+                        <p class="item-condition">{{ .Params.condition }}</p>
+                        {{ end }}
+                        {{ if .Params.category }}
+                        <span class="item-category">{{ .Params.category }}</span>
+                        {{ end }}
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</div>
+{{ end }}
