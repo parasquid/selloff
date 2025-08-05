@@ -8,7 +8,7 @@ A Hugo-based website for listing items you want to sell, with responsive design 
 - **Individual item pages** with image galleries  
 - **Sold items section** with grayscale effects and overlay
 - **Markdown-based content** management
-- **Automatic deployment** via GitHub Actions to Cloudflare Pages
+- **Simple deployment** to GitHub Pages via a shell script
 - **Mobile-friendly** design
 
 ## Getting Started
@@ -128,26 +128,23 @@ This site can be deployed to GitHub Pages using the included deployment script.
 ## Project Structure
 
 ```
-├── archetypes/           # Content templates
-├── content/              # Site content
-│   ├── _index.md        # Homepage content
+├── content/
 │   └── items/           # Item listings
-├── layouts/              # Hugo templates
-│   ├── _default/        # Default templates
-│   ├── items/           # Item-specific templates
-│   └── index.html       # Homepage template
-├── static/               # Static assets
-│   ├── css/             # Stylesheets
+├── static/
 │   └── images/          # Item images
 ├── deploy.sh             # GitHub Pages deployment script
 └── hugo.yaml            # Hugo configuration
 ```
 
+## Theme
+
+This site uses the [Selloff theme](https://github.com/parasquid/selloff-theme), which is imported as a Hugo Module. All layout and style information is handled by the theme.
+
 ## Customization
 
 ### Styling
 
-Edit `static/css/style.css` to customize the appearance.
+Styling is handled by the [Selloff theme](https://github.com/parasquid/selloff-theme). To customize the appearance, you can override the theme's styles by creating your own stylesheet in `static/css/custom.css`.
 
 ### Configuration
 

@@ -1,0 +1,20 @@
+/*
+This is a placeholder for your custom styles.
+
+You can use this file to override the default styles of the Selloff theme.
+Any CSS you add here will be loaded after the theme's stylesheet,
+so your rules will take precedence.
+
+For example, to change the primary color of the theme:
+
+:root {
+  --primary-color: #ff6347;
+}
+
+Or to change the font:
+
+body {
+    font-family: "Georgia", serif;
+}
+
+*/
