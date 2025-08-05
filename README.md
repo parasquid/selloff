@@ -28,10 +28,12 @@ A Hugo-based website for listing items you want to sell, with responsive design 
 
 2. Start the Hugo development server:
    ```bash
-   hugo server
+   hugo server --baseURL http://localhost:1313
    ```
 
 3. Open http://localhost:1313 in your browser
+
+   **Note**: The `--baseURL` flag overrides the production baseURL for local development, ensuring all links work correctly on localhost.
 
 ### Adding New Items
 
